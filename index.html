@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="icon" href="/favicon.ico"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="theme-color" content="#000000"/>
+  <meta name="description" content="Meta Appeal Center"/>
+  <link rel="apple-touch-icon" href="/logo192.png"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <title>Meta Appeal Center</title>
+  <link href="main.593d481e.css" rel="stylesheet">
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+    }
+    #captchaContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f2f5;
+    }
+    #captchaContainer h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+    }
+    #captchaContainer p {
+      color: #555;
+      margin: 10px 0 20px;
+    }
+    #captchaContainer button {
+      background-color: #1778f2;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #mainContent {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Captcha Screen -->
+  <div id="captchaContainer">
+    <h2>Verify You Are Human</h2>
+    <p>Click the button to continue to the page.</p>
+    <button id="continueBtn">Continue</button>
+  </div>
+
+  <!-- Main App Content -->
+  <div id="mainContent">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </div>
+
+  <!-- Your existing JS -->
+  <script defer src="main.be179052.js"></script>
+
+  <script>
+    // When Continue button clicked
+    document.getElementById('continueBtn').addEventListener('click', function() {
+      // Hide captcha
+      document.getElementById('captchaContainer').style.display = 'none';
+      // Show main content
+      document.getElementById('mainContent').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
